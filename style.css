@@ -100,6 +100,9 @@ h4 {
     padding: 20px 0;
     border-bottom: dotted 1px grey;
 }
+#repolist li:last-child {
+    border-bottom: 0;
+}
 #repolist li > * {
     display: inline-block;
     vertical-align: middle;

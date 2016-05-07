@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    unicode-range: U+0030—003A;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto';
+    -moz-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background: #f7f7f7;
+    padding: 2vh 5vw;
+    color: #333;
+}
+.button {
+    display: inline-block;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+header {
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: #f7f7f7;
+    z-index: -10;
+}
+h2 {
+    font-size: 4em;
+}
+h3 {
+    margin-bottom: 20px;
+}
+.button:first-of-type {
+    background: #005496;
+}
+.button:last-child {
+    background: #0fba5e;
+}
+header.small {
+    display: block;
+    height: 15vh;
+    padding: 20px 0;
+    top: 0;
+    vertical-align: bottom;
+    z-index: 10;
+}
+header.small > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    transition: .4s;
+}
+header.small img {
+    height: 4em;
+}
+header.small h2 {
+    font-size: 2.5em;
+}
+header.small h3 {
+    font-size: 0;
+}
+header.small div {
+    float: right;
+    margin-top: 20px;
+}
+article {
+    margin-top: 80vh;
+    line-height: 1.25;
+    z-index: 0;
+    background: #f7f7f7;
+    padding: 50px 0;
+}
+section {
+    padding: 20px 0;
+}
+h4 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    max-width: 75vw;
+}
+#repolist {
+    list-style: none;
+    padding: 50px;
+}
+#repolist li {
+    min-height: 70px;
+    padding: 20px 0;
+    border-bottom: dotted 1px grey;
+}
+#repolist li > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#repolist .button-row {
+    float: right;
+}

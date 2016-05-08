@@ -1,8 +1,13 @@
 @font-face {
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 300;
-    src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    src: local('Roboto Light'), local('Roboto-Light'), url(font/Roboto-Light.woff2) format('woff2'), url(font/Roboto-Light.ttf) format('truetype');
+    unicode-range: U+0030—003A;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 100;
+    src: local('Roboto Thin'), local('Roboto-Thin'), url(font/Roboto-Thin.woff2) format('woff2'), url(font/Roboto-Thin.ttf) format('truetype');
     unicode-range: U+0030—003A;
 }
 * {
@@ -11,12 +16,18 @@
     padding: 0;
 }
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'Open Sans', sans-serif;
     -moz-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background: #f7f7f7;
     padding: 2vh 5vw;
     color: #333;
+}
+a {
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
 }
 .button {
     display: inline-block;
@@ -33,14 +44,16 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
     background: #f7f7f7;
-    z-index: -10;
+}
+h2, h3 {
+    font-weight: 100;
 }
 h2 {
     font-size: 4em;
 }
 h3 {
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 .button:first-of-type {
@@ -50,6 +63,7 @@ h3 {
     background: #0fba5e;
 }
 header.small {
+    position: fixed;
     display: block;
     height: 15vh;
     padding: 20px 0;
@@ -73,11 +87,9 @@ header.small h3 {
     font-size: 0;
 }
 header.small div {
-    float: right;
     margin-top: 20px;
 }
 article {
-    margin-top: 80vh;
     line-height: 1.25;
     z-index: 0;
     background: #f7f7f7;
@@ -107,6 +119,9 @@ h4 {
     display: inline-block;
     vertical-align: middle;
 }
-#repolist .button-row {
+.button-row {
     float: right;
+}
+footer {
+    padding: 50px;
 }

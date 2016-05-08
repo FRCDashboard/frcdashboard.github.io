@@ -1,7 +1,8 @@
 var page = {
 	header: document.getElementsByTagName('header')[0],
 	repolist: document.getElementById('repolist'),
-    emailLink: document.getElementById('emailLink')
+    emailLink: document.getElementById('emailLink'),
+    article: document.getElementsByTagName('article')[0]
 };
 
 page.emailLink.onclick = function() {
@@ -13,9 +14,11 @@ window.onscroll = function() {
 	if (scroll >= window.innerHeight * 0.65) {
 		page.header.className = 'small';
         page.header.style.opacity = (scroll - window.innerHeight * 0.65) / 50;
+        page.article.style.marginTop = '80vh';
 	} else {
 		page.header.className = '';
         page.header.style.opacity = 1;
+        page.article.style.marginTop = 0;
 	}
 };
 

@@ -11,7 +11,7 @@ page.emailLink.onclick = function() {
 
 window.onscroll = function() {
 	scroll = document.body.scrollTop;
-	if (scroll >= window.innerHeight * 0.65) {
+	if (scroll >= window.innerHeight * 0.65 && window.innerWidth >= 600) {
 		page.header.className = 'small';
         page.header.style.opacity = (scroll - window.innerHeight * 0.65) / 50;
         page.article.style.marginTop = '100vh';
@@ -21,6 +21,7 @@ window.onscroll = function() {
         page.article.style.marginTop = 0;
 	}
 };
+
 
 var repoContent = new XMLHttpRequest();
 repoContent.open('GET', 'https://api.github.com/users/FRCDashboard/repos', false);

@@ -19,9 +19,10 @@ body {
     font-family: 'Roboto', 'Open Sans', sans-serif;
     -moz-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    font-weight: 300;
     background: #f7f7f7;
-    padding: 2vh 5vw;
     color: #333;
+    background: #444;
 }
 a {
     color: inherit;
@@ -38,13 +39,23 @@ a:hover {
     border-radius: 4px;
 }
 header {
-    width: 90vw;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f7f7f7;
+    /*background: #f7f7f7;*/
+    color: white
+}
+.video-container {
+    height: 0;
+}
+video {
+    position: relative;
+    width: 100%;
+    z-index: -10;
+    -webkit-filter: blur(10px);
 }
 h2, h3 {
     font-weight: 100;
@@ -66,10 +77,12 @@ header.small {
     position: fixed;
     display: block;
     height: 15vh;
-    padding: 20px 0;
+    padding: 20px 50px;
     top: 0;
     vertical-align: bottom;
     z-index: 10;
+    background: #f7f7f7;
+    color: #333;
 }
 header.small > * {
     display: inline-block;
@@ -90,10 +103,10 @@ header.small div {
     margin-top: 20px;
 }
 article {
+    padding: 2vh 5vw;
     line-height: 1.25;
     z-index: 0;
     background: #f7f7f7;
-    padding: 50px 0;
 }
 section {
     padding: 20px 0;
@@ -124,4 +137,5 @@ h4 {
 }
 footer {
     padding: 50px;
+    background: #f7f7f7;
 }

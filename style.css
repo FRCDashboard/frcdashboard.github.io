@@ -35,8 +35,15 @@ a:hover {
     color: white;
     border: none;
     padding: 10px 15px;
+    font-size: 1.1em;
     text-decoration: none;
     border-radius: 4px;
+    background: #295cb3;
+}
+article .button,
+header.small .button {
+    margin-top: 20px;
+    float: right;
 }
 header {
     width: 100vw;
@@ -82,20 +89,14 @@ video {
     position: relative;
     filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
     -webkit-filter: blur(10px);
-            filter: blur(10px);
-}
-.button:first-of-type {
-    background: #005496;
-}
-.button:last-child {
-    background: #0fba5e;
+    filter: blur(10px);
 }
 header.small {
     text-align: left;
     position: fixed;
     display: block;
     height: 15vh;
-    padding: 20px 50px;
+    padding: 15px 50px;
     top: 0;
     vertical-align: bottom;
     z-index: 10;
@@ -149,9 +150,6 @@ h4 {
 #repolist li > * {
     display: inline-block;
     vertical-align: middle;
-}
-.button-row {
-    float: right;
 }
 footer {
     padding: 50px;

@@ -31,7 +31,7 @@ repoContent.onreadystatechange = function() {
 		var name = obj[i].name;
         var desc = obj[i].description;
 		if (name.substring(0, 6) === 'addon-') {
-			page.repolist.innerHTML += '<li><div><h4>' + name.substring(6, name.length) + '</h4><p>' + desc + '</div><div class="button-row"><a class="button" href="https://github.com/FRCDashboard/' + name + '/releases">Download</a> <a class="button" href="https://github.com/FRCDashboard/' + name + '">GitHub</a></div></li>';
+			page.repolist.innerHTML += '<li><div><h4>' + name.substring(6, name.length) + '</h4><p>' + desc + '</div><a class="button" href="https://github.com/FRCDashboard/' + name + '">Get</a></li>';
 		}
 	}
 };

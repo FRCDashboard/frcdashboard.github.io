@@ -6,6 +6,11 @@ var page = {
 	article: document.getElementsByTagName('article')[0]
 };
 
+// Add video src if on desktop.
+// This way if you're on mobile the video's data won't be loaded and potentially burn mobile data.
+if (window.innerWidth > 600) {
+    document.getElementsByTagName('video')[0].src = 'video.mp4';
+}
 // We don't want email addresses in plain text, this will be an easy target for spam bots.
 page.emailLink.onclick = function() {
 	window.open('mailto:' + 'me' + '@' + 'erikboesen.com');
